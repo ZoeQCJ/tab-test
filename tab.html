@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        list-style: none;
+    }
+    main{
+        width: 800px;
+        height: 600px;
+       text-align: center;
+        margin:  0 auto;
+        margin-top: 50px;
+    }
+    main h4{
+        font-size: 35px;
+        color: chocolate;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .firstnav{
+        display: flex;
+        width: 800px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+    .tabsbox{
+        width: 100%;
+        height: 500px;
+        border: 1px solid chocolate;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+        color: chocolate;
+        
+    }
+    .firstnav{
+        width: 800px;
+        height: 40px;
+      
+    }
+    .firstnav ul{
+        display: flex;
+        /* overflow: hidden; */
+      
+    }
+    .firstnav li {
+        height: 40px;
+        width: 100px;
+        line-height: 40px;
+        border: 1px solid chocolate;
+        border-left: 0;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+        /* float: left; */
+    }
+    .firstnav .tabadd{
+        border: 1px solid chocolate;
+        border-left: 0;
+        border-right: 0;
+        width: 100%;
+        height: 40px;
+        /* position: relative; */
+        padding-right: 30px;
+        text-align: right;
+        line-height: 40px;
+    }
+
+    .firstnav  li{
+        position: relative;
+    }
+    .firstnav  li.liactive{
+        border-bottom: 0;
+    }
+    .firstnav span:first-child{
+      color: lightslategrey;
+
+    }
+    .firstnav span:first-child input{
+      width: 70px;
+      margin-left: -8px;
+      height: 30px;
+      text-align: center;
+
+    }
+    .firstnav span.el-icon-remove{
+        position: absolute;
+        top: 2px;
+        right: 2px;
+    }
+    .tabContent{
+        height: 460px;
+        width: 800px;
+        border: 1px solid chocolate;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    }
+    .tabson section{
+        display: none;
+        text-align: left;
+        padding-left: 20px;
+        font-size: 25px;
+        color: chocolate;
+    }
+    .tabson section input{
+      width: 90%;
+      height: 400px;
+      margin-top: 20px;
+      font-size: 25px;
+      
+    }
+    .tabson section.contactive{
+        display: block;
+    }
+    
+</style>
+</head>
+<body>
+    <main class="main" id="tab">
+        <h4>JS面向对象 动态添加标签页</h4>
+        <div class="tabsbox" id="tab">
+            <!-- tab标签 -->
+            <nav class="firstnav">
+                <ul>
+                    <li class="liactive"><span>测试1</span> <span class="el-icon-remove"></span> </li>
+                    <li><span>测试2</span> <span class="el-icon-remove"></span></li>
+                    <li><span>测试3</span> <span class="el-icon-remove"></span></li>
+                </ul>
+                <div class="tabadd">
+                    <span class="el-icon-circle-plus"></span>
+                </div>
+            </nav>
+            <!-- tab内容 -->
+            <div class="tabson">
+                <section class="contactive">测试1</section>
+                <section>测试2</section>
+                <section>测试3</section>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./js/tab.js"></script>
+</html>
